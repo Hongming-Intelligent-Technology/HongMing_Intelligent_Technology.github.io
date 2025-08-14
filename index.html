@@ -1,546 +1,387 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Hongming Intelligent Technology</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" type="image/png" href="img/HongMIng_Logo.png">
+    <title>Hongming Intelligent Technology</title>
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/light-box.css">
-        <link rel="stylesheet" href="css/owl-carousel.css">
-        <link rel="stylesheet" href="css/templatemo-style.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/light-box.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
+    <!-- JavaScript Libraries -->
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
 
 <body>
-
-
-
-        <header class="nav-down responsive-nav hidden-lg hidden-md">
-            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!--/.navbar-header-->
-            <div id="main-nav" class="collapse navbar-collapse">
-                <nav>
-                    <ul class="nav navbar-nav">
-                        <li><a href="#top">Home</a></li>
-                        <li><a href="#featured">Featured</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#video">Presentation</a></li>
-                        <li><a href="#blog">Blog Entries</a></li>
-
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <div class="sidebar-navigation hidde-sm hidden-xs">
-            <div class="logo">
-                <a href="#">Hongming<em>Intelligent Technology</em></a>
-            </div>
+    <!-- Mobile Navigation -->
+    <header class="nav-down responsive-nav hidden-lg hidden-md">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div id="main-nav" class="collapse navbar-collapse">
             <nav>
-                <ul>
-                    <li>
-                        <a href="#top">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#featured">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Featured
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Works
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#video">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Presentation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#blog">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Blog Entires
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact">
-                            <span class="rect"></span>
-                            <span class="circle"></span>
-                            Contact Us
-                        </a>
-                    </li>
+                <ul class="nav navbar-nav">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#video">Presentation</a></li>
+                    <li><a href="#blog">Blog Entries</a></li>
                 </ul>
             </nav>
-            <ul class="social-icons">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-            </ul>
         </div>
+    </header>
 
-        <div class="slider">
-            <div class="Modern-Slider content-section" id="top">
-                <!-- Item -->
-                <div class="item item-1">
-                    <div class="img-fill">
+    <!-- Desktop Sidebar Navigation -->
+    <div class="sidebar-navigation hidde-sm hidden-xs">
+        <div class="logo">
+            <a href="#">Hongming<em>Intelligent Technology</em></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#top">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#featured">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Featured
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Works
+                    </a>
+                </li>
+                <li>
+                    <a href="#video">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Presentation
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Blog Entries
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Main Slider -->
+    <div class="slider">
+        <div class="Modern-Slider content-section" id="top">
+            <!-- Slide 1 -->
+            <div class="item item-1">
+                <div class="img-fill">
                     <div class="image"></div>
                     <div class="info">
                         <div>
-                          <h1>Adsorption-type<br>concrete inspection robot</h1>
-                          <p>Anti-gravity negative pressure robot design concept, <br>
-                          	confined space autonomous flight control system.</p>
-                          <div class="white-button button">
-                              <a href="#featured">Discover More</a>
-                          </div>
-                        </div>
+                            <h1>Adsorption-type<br>concrete inspection robot</h1>
+                            <p>Anti-gravity negative pressure robot design concept,<br>
+                            confined space autonomous flight control system.</p>
+                            <div class="white-button button">
+                                <a href="#featured">Discover More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- // Item -->
-                <!-- Item -->
-                <div class="item item-2">
-                    <div class="img-fill">
-                        <div class="image"></div>
-                        <div class="info">
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="item item-2">
+                <div class="img-fill">
+                    <div class="image"></div>
+                    <div class="info">
                         <div>
-                          <h1>SafeRL-Quad <br>Sim2real Framework</h1>
-                          <p>A Safe and Agile RL Framework for Quadruped Robots.
-							<br>The first robot framework.</p>
-                          
-                          <div class="white-button button">
-                              <a href="#featured">Share More</a>
-                          </div>
-                        </div>
+                            <h1>SafeRL-Quad<br>Sim2real Framework</h1>
+                            <p>A Safe and Agile RL Framework for Quadruped Robots.<br>
+                            The first robot framework.</p>
+                            <div class="white-button button">
+                                <a href="#featured">Share More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- // Item -->
-                <!-- Item -->
-                <div class="item item-3">
-                    <div class="img-fill">
-                        <div class="image"></div>
-                        <div class="info">
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="item item-3">
+                <div class="img-fill">
+                    <div class="image"></div>
+                    <div class="info">
                         <div>
-                          <h1>YOLO11 EyeTrack<br>System</h1>
-                          <p>A fursuit pupil tracking system based on YOLO11 <br>used to achieve the first fursuit with movable eyes.</p>
-                          
-                          <div class="white-button button">
-                              <a href="#featured">Learn More</a>
-                          </div>
-                        </div>
+                            <h1>YOLO11 EyeTrack<br>System</h1>
+                            <p>A fursuit pupil tracking system based on YOLO11<br>
+                            used to achieve the first fursuit with movable eyes.</p>
+                            <div class="white-button button">
+                                <a href="#featured">Learn More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- // Item -->
             </div>
         </div>
+    </div>
 
-
-        <div class="page-content">
-            <section id="featured" class="content-section">
-                <div class="section-heading">
-                    <h1>Featured<br><em>Projects</em></h1>
-                    <p>Walking on the cutting-edge road, we create brilliance,<br>The future is ours</p>
-                </div>
-                <div class="section-content">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="image">
-                                <img src="img\detect_robotic.png" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
+    <!-- Page Content -->
+    <div class="page-content">
+        <!-- Featured Projects Section -->
+        <section id="featured" class="content-section">
+            <div class="section-heading">
+                <h1>Featured<br><em>Projects</em></h1>
+                <p>Walking on the cutting-edge road, we create brilliance,<br>
+                The future is ours</p>
+            </div>
+            <div class="section-content">
+                <div class="owl-carousel owl-theme">
+                    <!-- Project 1 -->
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/detect_robotic.png" alt="Concrete Inspection Robot">
+                            <div class="featured-button button">
+                                <a href="#projects">Continue Reading</a>
                             </div>
-                            <div class="text-content">
-                                <h4>Adsorption-type Concrete Inspection Robot</h4>
-                                <span>2024.02</span>
-                                <p>The adsorption-type tunnel inspection robot based on the anti-gravity negative pressure design concept, combined with the YOLO11 concrete quality defect management platform, realizes fully automated project management.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img\Quad.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>SafeRL-Quad Sim2real Framework</h4>
-                                <span>2025.09</span>
-                                <p>Combining the dual ideas of the ABS and ASAP projects from the Carnegie Mellon University Robotics Institute, a new framework and training method are constructed to achieve efficient reinforcement learning training of quadruped robots.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img\yolo11_eyetrack_project.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>Yolo11 EyeTrack System</h4>
-                                <span>2025.2</span>
-                                <p>A human pupil tracking system based on a recognition model, powered by the Walnut Pie B2 development board, enables low-cost fursuits with movable electronic eyes.</p>
-                            </div>
-                        </div>
-<!--
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/featured_2.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>In volutpat augue lectus</h4>
-                                <span>Elementum</span>
-                                <p>#4 Aliquam mollis lacus eget metus efficitur lobortis. Suspendisse libero lacus, accumsan vitae commodo tristique, luctus gravida metus.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/featured_1.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>Cras commodo odio</h4>
-                                <span>Aliquam</span>
-                                <p>#5 Mauris lacinia pretium libero, ut tincidunt lacus molestie ornare. Phasellus a facilisis erat. Praesent eleifend nibh mauris, quis sodales lorem convallis pulvinar.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/featured_3.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>Sed at massa turpis</h4>
-                                <span>Curabitur</span>
-                                <p>#6 Vestibulum tincidunt ornare ligula vel molestie. Curabitur hendrerit mauris mollis ipsum vulputate rutrum. Phasellus luctus odio eget dui imperdiet.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/featured_2.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>Aliquam mollis lacus</h4>
-                                <span>Suspendisse</span>
-                                <p>#7 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus pharetra in.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/featured_1.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>Mauris lacinia pretium</h4>
-                                <span>Vestibulum</span>
-                                <p>#8 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus pharetra in.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/featured_3.jpg" alt="">
-                                <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
-                                </div>
-                            </div>
-                            <div class="text-content">
-                                <h4>Proin sit amet fringilla erat</h4>
-                                <span>Convallis</span>
-                                <p>#9 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus pharetra in.</p>
-                            </div>
-                        </div>
-                        -->
-                    </div>
-                </div>
-            </section>
-            <section id="projects" class="content-section">
-                <div class="section-heading">
-                    <h1>Recent<br><em>Projects</em></h1>
-                    <p>Do our best to challenge authority <br>and <b>lead the field.</b></p>
-                </div>
-                <div class="item">
-                    <div class="col-md-12">
-                        <div id="piechart-container"></div>
-                    </div>
-                </div>
-            </section>
-            <section id="video" class="content-section">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-heading">
-                            <h1>This is a <em>company</em> presentation.</h1>
-                            <p>Praesent pellentesque efficitur magna, sed pellentesque neque malesuada vitae.</p>
                         </div>
                         <div class="text-content">
-                            <p>In eget ipsum sed lorem vehicula luctus. Curabitur non dolor rhoncus, hendrerit justo sit amet, vestibulum turpis. Pellentesque id auctor tellus, vel ultricies augue. Duis condimentum aliquet blandit. Fusce rhoncus et eros ut pharetra. Phasellus convallis ultricies ligula ac gravida.</p>
-                        </div>
-                        <div class="accent-button button">
-                            <a href="#blog">Continue Reading</a>
+                            <h4>Adsorption-type Concrete Inspection Robot</h4>
+                            <span>2024.02</span>
+                            <p>The adsorption-type tunnel inspection robot based on the anti-gravity negative pressure design concept, combined with the YOLO11 concrete quality defect management platform, realizes fully automated project management.</p>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="box-video">
-                            <div class="bg-video" style="background-image: url(https://unsplash.imgix.net/photo-1425036458755-dc303a604201?fit=crop&fm=jpg&q=75&w=1000);">
-                                <div class="bt-play">Play</div>
+                    
+                    <!-- Project 2 -->
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/Quad.jpg" alt="SafeRL-Quad Framework">
+                            <div class="featured-button button">
+                                <a href="#projects">Continue Reading</a>
                             </div>
-                            <div class="video-container">
-                                <iframe width="100%" height="520" src="https://www.youtube.com/embed/j-_7Ub-Zkow?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                        <div class="text-content">
+                            <h4>SafeRL-Quad Sim2real Framework</h4>
+                            <span>2025.09</span>
+                            <p>Combining the dual ideas of the ABS and ASAP projects from the Carnegie Mellon University Robotics Institute, a new framework and training method are constructed to achieve efficient reinforcement learning training of quadruped robots.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="item">
+                        <div class="image">
+                            <img src="img/yolo11_eyetrack_project.jpg" alt="YOLO11 EyeTrack System">
+                            <div class="featured-button button">
+                                <a href="#projects">Continue Reading</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section id="blog" class="content-section">
-                <div class="section-heading">
-                    <h1>Blog<br><em>Entries</em></h1>
-                    <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
-                    <br>Phasellus luctus odio eget dui imperdiet.</p>
-                </div>
-                <div class="section-content">
-                    <div class="tabs-content">
-                        <div class="wrapper">
-                            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                              <li><a href="#tab1" class="active">RL</a></li>
-                              <li><a href="#tab2">YOLO</a></li>
-                              <li><a href="#tab3">Code</a></li>
-                              <li><a href="#tab4">Robotics</a></li>
-                            </ul>
-                            <section id="first-tab-group" class="tabgroup">
-                                <div id="tab1">
-                                    <ul>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Integer ultrices augue</h4>
-                                                    <span>25 July 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Cras commodo odio ut</h4>
-                                                    <span>16 July 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Sed at massa turpis</h4>
-                                                    <span>10 July 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="tab2">
-                                    <ul>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Sed at massa turpis</h4>
-                                                    <span>30 June 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Lorem ipsum dolor sit</h4>
-                                                    <span>24 June 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Cras commodo odio ut</h4>
-                                                    <span>12 June 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="tab3">
-                                    <ul>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4></h4>
-                                                    <span>26 May 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Lorem ipsum dolor sit</h4>
-                                                    <span>22 May 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Integer ultrices augue</h4>
-                                                    <span>8 May 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="tab4">
-                                    <ul>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Lorem ipsum dolor sit</h4>
-                                                    <span>26 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>                                
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Integer ultrices augue eu</h4>
-                                                    <span>24 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <div class="text-content">
-                                                    <h4>Cras commodo odio ut</h4>
-                                                    <span>20 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </section> 
+                        <div class="text-content">
+                            <h4>Yolo11 EyeTrack System</h4>
+                            <span>2025.2</span>
+                            <p>A human pupil tracking system based on a recognition model, powered by the Walnut Pie B2 development board, enables low-cost fursuits with movable electronic eyes.</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="footer">
-                <p>Copyright &copy; 2024 Hongming Intelligent Technology 
-                
-                . Design: TemplateMo</p>
-            </section>
-        </div>
+            </div>
+        </section>
 
+        <!-- Projects Chart Section -->
+        <section id="projects" class="content-section">
+            <div class="section-heading">
+                <h1>Recent<br><em>Projects</em></h1>
+                <p>Pushing boundaries and<br>
+                <strong>leading innovation</strong></p>
+            </div>
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="piechart-container" style="width: 100%; height: 500px;"></div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-12">
+                        <div class="text-content">
+                            <p>Our projects span multiple domains of intelligent technology, with a strong focus on robotics and machine learning applications. The chart above shows the distribution of our current project categories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Presentation Section -->
+        <section id="video" class="content-section">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h1>This is a <em>company</em> presentation.</h1>
+                        <p>Praesent pellentesque efficitur magna, sed pellentesque neque malesuada vitae.</p>
+                    </div>
+                    <div class="text-content">
+                        <p>In eget ipsum sed lorem vehicula luctus. Curabitur non dolor rhoncus, hendrerit justo sit amet, vestibulum turpis. Pellentesque id auctor tellus, vel ultricies augue. Duis condimentum aliquet blandit. Fusce rhoncus et eros ut pharetra. Phasellus convallis ultricies ligula ac gravida.</p>
+                    </div>
+                    <div class="accent-button button">
+                        <a href="#blog">Continue Reading</a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="box-video">
+                        <div class="bg-video" style="background-image: url(https://unsplash.imgix.net/photo-1425036458755-dc303a604201?fit=crop&fm=jpg&q=75&w=1000);">
+                            <div class="bt-play">Play</div>
+                        </div>
+                        <div class="video-container">
+                            <iframe width="100%" height="520" src="https://www.youtube.com/embed/j-_7Ub-Zkow?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="content-section">
+            <div class="section-heading">
+                <h1>Blog<br><em>Entries</em></h1>
+                <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum.<br>
+                Phasellus luctus odio eget dui imperdiet.</p>
+            </div>
+            <div class="section-content">
+                <div class="tabs-content">
+                    <div class="wrapper">
+                        <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                            <li><a href="#tab1" class="active">RL</a></li>
+                            <li><a href="#tab2">YOLO</a></li>
+                            <li><a href="#tab3">Code</a></li>
+                            <li><a href="#tab4">Robotics</a></li>
+                        </ul>
+                        <section id="first-tab-group" class="tabgroup">
+                            <!-- RL Tab Content -->
+                            <div id="tab1">
+                                <ul>
+                                    <li>
+                                        <div class="item">
+                                            <div class="text-content">
+                                                <h4>Integer ultrices augue</h4>
+                                                <span>25 July 2018</span>
+                                                <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                <div class="accent-button button">
+                                                    <a href="blog/RL/">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Additional RL blog entries... -->
+                                </ul>
+                            </div>
+                            
+                            <!-- YOLO Tab Content -->
+                            <div id="tab2">
+                                <ul>
+                                    <li>
+                                        <div class="item">
+                                            <div class="text-content">
+                                                <h4>Sed at massa turpis</h4>
+                                                <span>30 June 2018</span>
+                                                <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                <div class="accent-button button">
+                                                    <a href="blog/YOLO/">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Additional YOLO blog entries... -->
+                                </ul>
+                            </div>
+                            
+                            <!-- Code Tab Content -->
+                            <div id="tab3">
+                                <ul>
+                                    <li>
+                                        <div class="item">
+                                            <div class="text-content">
+                                                <h4>Lorem ipsum dolor sit</h4>
+                                                <span>22 May 2018</span>
+                                                <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                <div class="accent-button button">
+                                                    <a href="blog/Code/">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Additional Code blog entries... -->
+                                </ul>
+                            </div>
+                            
+                            <!-- Robotics Tab Content -->
+                            <div id="tab4">
+                                <ul>
+                                    <li>
+                                        <div class="item">
+                                            <div class="text-content">
+                                                <h4>Integer ultrices augue eu</h4>
+                                                <span>24 April 2018</span>
+                                                <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                <div class="accent-button button">
+                                                    <a href="blog/Robotics/abs.html">Continue Reading</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Additional Robotics blog entries... -->
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="footer">
+            <p>Copyright &copy; 2024 Hongming Intelligent Technology. Design: TemplateMo</p>
+        </section>
+    </div>
+
+    <!-- JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
     <script src="js/vendor/bootstrap.min.js"></script>
-    
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/projects-chart.js"></script>
 
+    <!-- Scroll Handling Script -->
     <script>
-        // Hide Header on on scroll down
+        // Hide Header on scroll down
         var didScroll;
         var lastScrollTop = 0;
         var delta = 5;
@@ -560,17 +401,12 @@
         function hasScrolled() {
             var st = $(this).scrollTop();
             
-            // Make sure they scroll more than delta
             if(Math.abs(lastScrollTop - st) <= delta)
                 return;
             
-            // If they scrolled down and are past the navbar, add class .nav-up.
-            // This is necessary so you never see what is "behind" the navbar.
             if (st > lastScrollTop && st > navbarHeight){
-                // Scroll Down
                 $('header').removeClass('nav-down').addClass('nav-up');
             } else {
-                // Scroll Up
                 if(st + $(window).height() < $(document).height()) {
                     $('header').removeClass('nav-up').addClass('nav-down');
                 }
@@ -579,9 +415,5 @@
             lastScrollTop = st;
         }
     </script>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script src="piechart.js"></script>
-
 </body>
 </html>
