@@ -8,7 +8,7 @@ function toggleBib(elementId) {
 }
 
 // 页面加载完成后执行的初始化操作
-window.onload = function() {
+window.addEventListener('load', function() {
     // 可添加页面加载后的初始化逻辑，如默认隐藏某些元素
     console.log("hidebib.js 加载完成");
-};
+});

@@ -14,22 +14,25 @@ body, td, th {
     font-weight: 400;
 }
 
-heading {
+.project-heading {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
     font-size: 17px;
     font-weight: 600;
+    margin: 0;
 }
 
-sectionheading {
+.section-heading {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
     font-size: 22px;
     font-weight: 600;
+    margin: 0;
 }
 
-pageheading {
+.page-heading {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
     font-size: 38px;
     font-weight: 400;
+    margin: 0;
 }
 
 hr {
@@ -44,13 +47,58 @@ strong {
     font-weight: 600;
 }
 
-strongred {
+.strong-red {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    color: 'red';
+    color: red;
     font-size: 16px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .ImageBorder {
     border-width: 1px;
     border-color: Black;
+}
+
+.paper {
+    margin: 4px 0 8px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    background: #1772d0;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(23, 114, 208, 0.3);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+    transform: translateY(0);
+}
+
+.cta-btn:hover {
+    background: #f09228;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(240, 146, 40, 0.4);
+}
+
+.section-subheading {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    color: #1772d0;
 }

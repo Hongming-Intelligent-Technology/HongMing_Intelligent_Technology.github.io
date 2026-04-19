@@ -1,26 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Reuse global styles -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/HongMing_Logo.png">
     <!-- Reference external JS -->
-    <script async="" src="./analytics.js"></script>
-    <script type="text/javascript" src="hidebib.js"></script>
-    <title>YOLOv8 Empowers Tunnel Inspection: Practice of Adsorption-Type Concrete Defect Detection Robot - Hongming-Intelligent-Technology</title>
-    <meta name="description" content="A detailed explanation of the design and implementation of adsorption-type concrete inspection robot based on YOLOv8 model, covering the full process from industry pain points to technical implementation">
+    <script async src="../js/analytics.js"></script>
+    <script type="text/javascript" src="../js/hidebib.js"></script>
+    <title>YOLOv8 Empowers Tunnel Inspection: Practice of Adsorption-Type Concrete Defect Detection Robot -
+        Hongming-Intelligent-Technology</title>
+    <meta name="description"
+        content="A detailed explanation of the design and implementation of adsorption-type concrete inspection robot based on YOLOv8 model, covering the full process from industry pain points to technical implementation">
     <!-- Google Analytics -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-XXXXX-Y', 'auto');
         ga('send', 'pageview');
     </script>
-    <script src="scramble.js"></script>
+    <script src="../js/scramble.js"></script>
     <!-- Project blog exclusive styles -->
     <style type="text/css">
         .tech-arch {
@@ -30,6 +38,7 @@
             margin: 10px 0;
             border-left: 4px solid #1772d0;
         }
+
         .code-block {
             background: #f0f0f0;
             padding: 12px;
@@ -39,12 +48,11 @@
             overflow-x: auto;
             margin: 10px 0;
         }
+
         .section-subheading {
-            font-size: 19px;
-            font-weight: 600;
-            margin: 20px 0 10px 0;
-            color: #1772d0;
+            /* Defined globally in style.css */
         }
+
         .blog-meta {
             color: #666;
             font-size: 14px;
@@ -52,26 +60,31 @@
             padding-bottom: 10px;
             border-bottom: 1px dashed #ddd;
         }
+
         .blog-content p {
             margin: 15px 0;
             line-height: 1.8;
         }
+
         .blog-image {
             text-align: center;
             margin: 25px 0;
         }
+
         .blog-image img {
             max-width: 85%;
             border-radius: 8px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
             border: 1px solid #eee;
         }
+
         .blog-image .caption {
             font-size: 14px;
             color: #666;
             margin-top: 8px;
             line-height: 1.5;
         }
+
         .quote-block {
             border-left: 3px solid #f09228;
             padding: 0 15px;
@@ -80,22 +93,27 @@
             font-style: italic;
             line-height: 1.7;
         }
+
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
         }
-        .comparison-table th, .comparison-table td {
+
+        .comparison-table th,
+        .comparison-table td {
             border: 1px solid #ddd;
             padding: 12px 8px;
             text-align: center;
             line-height: 1.6;
         }
+
         .comparison-table th {
             background: #f5f5f5;
             font-weight: 600;
             color: #333;
         }
+
         .sub-tech-arch {
             background: #f9f9f9;
             padding: 12px;
@@ -103,381 +121,528 @@
             margin: 15px 0 5px 20px;
             border-left: 3px solid #66afe9;
         }
+
         .feature-list {
             list-style-type: disc;
             padding-left: 40px;
             margin: 10px 0;
             line-height: 1.7;
         }
+
         .algorithm-flow {
             background: white;
             padding: 15px;
             border-radius: 8px;
             margin: 20px 0;
             border: 1px solid #eee;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
+
 <body>
-<table width="900" border="0" align="center" cellspacing="0" cellpadding="20">
-    <tbody><tr><td>
-        <!-- Header navigation + blog title -->
-        <p align="center">
-            <pageheading>YOLOv8 Empowers Tunnel Inspection: Practice of Adsorption-Type Concrete Defect Detection Robot</pageheading><br>
-            <small style="color:#666;">Redefining Tunnel Lining Quality Inspection from Industry Pain Points to Technical Implementation</small>
-        </p>
-        <div class="blog-meta" align="center">
-            Publication Date: June 10, 2025 | Author: Hongyi Hao | Category: Robotics / Computer Vision / Engineering Inspection
-            <br>Technical Keywords: YOLOv8 | Adsorption-Type Robot | Radar Detection | 5G Transmission | 3D Visualization
-        </div>
-        <hr>
-        <!-- Return button group -->
-        <p align="left" style="margin-bottom:20px;">
-            <a href="index.html" style="background: #f0f0f0; color: #1772d0; padding: 6px 12px; border-radius: 6px; text-decoration: none; margin-right:10px;">← Back to Project List</a>
-            <a href="Project-1.html" style="background: #f0f0f0; color: #1772d0; padding: 6px 12px; border-radius: 6px; text-decoration: none;">Project Homepage →</a>
-        </p>
-
-        <!-- Blog content -->
-        <div class="blog-content">
-            <p>As of the end of 2024, China's railway tunnels have reached 16,798 with a total length of approximately 19,630 km. As the core barrier for structural safety, the quality inspection of tunnel lining concrete is crucial for engineering operation and maintenance. However, traditional inspection methods have long faced three major pain points: first, <strong>low efficiency</strong> – manual high-altitude handheld radar inspection can only complete 200 meters per day, and setting up inspection frames requires construction interruption; second, <strong>data distortion</strong> – radar shaking caused by manual operation requires 3-5 repeated inspections to confirm defects; third, <strong>high safety risks</strong> – fall risks from high-altitude operations and toxic gas threats in tunnels endanger the safety of operators.</p>
-            
-            <p>To address these challenges, we have developed the "Tiehang Series" adsorption-type concrete defect detection robot over 2 years. Through the deep integration of YOLOv8 deep learning model and adsorption-type robot technology, we realize automated, high-precision, and safe inspection of tunnel lining defects. This article provides a comprehensive analysis from technology selection, system design, engineering implementation to result verification.</p>
-
-            <div class="blog-image">
-                <img src="..\data\Detect_Robot\flow_chart.png" alt="Overall Architecture of Adsorption-Type Concrete Defect Detection Robot System">
-                <p class="caption">Figure 1: Overall architecture diagram of adsorption-type concrete defect detection robot and intelligent monitoring system (including three-level architecture of terminal layer, network layer, and application layer)</p>
-            </div>
-
-            <p class="section-subheading">I. Algorithm Selection: Why YOLOv8 is the Optimal Solution for Tunnel Defect Detection?</p>
-            <p>The core requirement of tunnel lining defect detection is the balance between "real-time performance" and "accuracy" – the robot moves at a speed of 0.3 m/s, requiring defect identification and positioning of a single radar image frame within 100 ms, while the recognition accuracy for cavities with diameter ≥5 cm needs to exceed 90%. For this reason, we compared three mainstream detection schemes:</p>
-            
-            <div class="sub-tech-arch">
-                <p><strong>1. Traditional Machine Vision Scheme</strong></p>
-                <p>It relies on traditional algorithms such as edge detection and threshold segmentation to identify defects through gray value differences in radar images. In actual tests, this scheme has a false detection rate of up to 42% in complex backgrounds such as tunnel water seepage and steel bar shadows, and cannot distinguish similar defects such as "incompacted areas" and "cavities", so it has been quickly eliminated.</p>
-            </div>
-
-            <div class="sub-tech-arch">
-                <p><strong>2. Faster-RCNN Two-Stage Detection Scheme</strong></p>
-                <p>Adopting a two-stage process of "region proposal + classification regression", it achieves a mean Average Precision (mAP) of 0.89 on the standard defect dataset, but the inference speed is only 12 fps with a single-frame processing delay of 83 ms. Combined with data transmission time, it cannot meet real-time detection requirements. Moreover, the model parameter quantity reaches 120M, making it difficult to deploy on edge computing devices such as Jetson Xavier NX.</p>
-            </div>
-
-            <div class="sub-tech-arch">
-                <p><strong>3. YOLO Series Single-Stage Detection Scheme</strong></p>
-                <p>Adopting an end-to-end regression approach, it converts defect detection into direct prediction of bounding box coordinates and category probabilities. We tested the performance of YOLO versions v5 to v8 in tunnel defect detection scenarios:</p>
-                <table class="comparison-table" style="margin:10px 0;">
-                    <tr>
-                        <th>YOLO Version</th>
-                        <th>mAP@0.5</th>
-                        <th>Inference Speed (fps)</th>
-                        <th>Parameter Quantity (M)</th>
-                        <th>Small Defect Recognition Rate</th>
-                        <th>Edge Deployment Adaptability</th>
-                    </tr>
-                    <tr>
-                        <td>v5s</td>
-                        <td>0.88</td>
-                        <td>56</td>
-                        <td>7.5</td>
-                        <td>85%</td>
-                        <td>Excellent</td>
-                    </tr>
-                    <tr>
-                        <td>v8n</td>
-                        <td>0.90</td>
-                        <td>72</td>
-                        <td>3.2</td>
-                        <td>89%</td>
-                        <td>Excellent</td>
-                    </tr>
-                    <tr>
-                        <td>v8s</td>
-                        <td>0.92</td>
-                        <td>45</td>
-                        <td>11.2</td>
-                        <td>91%</td>
-                        <td>Good</td>
-                    </tr>
-                </table>
-                <p>Finally, we selected <strong>YOLOv8n</strong> as the basic framework and conducted enhanced optimization: its basic version has an mAP of 0.90, an inference speed of 72 fps (single-frame delay of only 14 ms), and a parameter quantity of only 3.2M, with significant lightweight advantages; at the same time, YOLOv8's Anchor-Free design is more suitable for the irregular shapes of tunnel defects. After targeted optimization, the small defect recognition rate can be increased to 92%, perfectly balancing accuracy and speed requirements.</p>
-            </div>
-
-            <div class="blog-image">
-                <img src="..\data\Detect_Robot\yolo_compair.png" alt="Performance Comparison Radar Chart of YOLO Detection Algorithms">
-                <p class="caption">Figure 2: Performance comparison YOLOv11 and YOLOv8n in tunnel defect detection</p>
-            </div>
-
-            <p class="section-subheading">II. Core Technical Solution: Collaborative Design of Hardware and Algorithm</p>
-            <p>The core innovation of the project lies in the deep collaboration between the "adsorption-type robot hardware platform" and the "YOLOv8 defect detection algorithm", realizing end-to-end optimization from "signal collection" to "defect identification".</p>
-
-            <div class="tech-arch">
-                <p><strong>1. Detailed Explanation of Adsorption-Type Inspection Robot Hardware System</strong></p>
-                <p>The robot adopts a "four-rotor auxiliary + negative pressure adsorption" composite structure, divided into two models: "Tiehang-1" (lightweight type, suitable for tunnels with diameter 6-8m) and "Tiehang-2" (heavy-duty type, equipped with multiple sensors, suitable for tunnels with diameter 8-12m). It consists of five core modules:</p>
-
-                <ul class="feature-list">
-                    <li><strong>Motion Control Module</strong>: Four-drive wheel set + four-rotor propeller, with Mecanum wheels for the front wheel set supporting omnidirectional movement; the rotors provide auxiliary lift, reducing negative pressure adsorption power consumption by 30%. Equipped with high-precision encoders, the walking speed control error is ≤±0.02 m/s.</li>
-                    <li><strong>Adsorption Execution Module</strong>: Four groups of vacuum suction cups with distributed layout, each with a diameter of 200mm and a single suction force ≥150N; equipped with pressure sensors to monitor adsorption force in real-time, automatically activating backup suction cups when the adsorption force is lower than 80N to prevent falling.</li>
-                    <li><strong>Radar Detection Module</strong>: 900MHz wireless air-coupled radar with detection depth of 0-1.5m and distance resolution ≤5mm; integrated signal acquisition and processing through timing control chips, with a sampling frequency of 200MHz, generating one radar image frame every 0.5s.</li>
-                    <li><strong>Environmental Perception Module</strong>: Integrated with lidar (ranging range 0.1-10m), gravity sensor (measurement accuracy ±0.1°), and six-in-one gas sensor (detecting O₂, CO, H₂S, etc.) to perceive tunnel environment and robot posture in real-time.</li>
-                    <li><strong>Energy and Communication Module</strong>: 50Ah high-capacity lithium battery supporting 4 hours of continuous operation; dual communication link design with 5G transmission rate ≥100Mbps and coverage radius ≥500m, while retaining WIFI backup link to ensure no data loss.</li>
-                </ul>
-            </div>
-
-            <div class="tech-arch">
-                <p><strong>2. YOLOv8-Based Defect Detection Algorithm Optimization</strong></p>
-                <p>Targeting the particularity of tunnel radar images, we conducted in-depth optimization on YOLOv8n from three aspects: dataset, network structure, and inference deployment, forming a tunnel defect-specific detection model:</p>
-                
-                <div class="algorithm-flow">
-                    <p align="center"><strong>YOLOv8 Defect Detection Optimization Flow Chart</strong></p>
-                </div>
-
-                <p><strong>(1) Construction and Enhancement of Bimodal Dataset</strong></p>
-                <p>Traditional single-image datasets cannot cover complex defect types in tunnels. We constructed a "radar image + original signal" bimodal dataset specifically adapted to YOLOv8's adaptive anchor box mechanism:</p>
-                <ul class="feature-list">
-                    <li>Data Collection: Collected 5km of lining data in Xiaolijian Tunnel (with cavity defects) and Lushan Tunnel (with steel bar abnormalities) of Huhu Railway, obtaining 1,200 radar images (resolution 640×480) and 4,000 original radar signals (each containing 1,024 sampling points).</li>
-                    <li>Annotation Specification: Annotated in YOLO format (txt files), defining 4 defect labels: "cavity" (0), "insufficient thickness" (1), "incompaction" (2), "steel bar abnormality" (3). Cross-annotated by 3 senior engineers with annotation accuracy ≥98%.</li>
-                    <li>Data Enhancement: Targeting the limitations of YOLOv8's Mosaic enhancement, added a "defect area retention" enhancement strategy, combined with 9 enhancement methods including sliding window cropping (generating 3x samples), mirror flipping, Gaussian noise addition, and brightness adjustment, finally expanding the dataset scale to 15,000 samples.</li>
-                </ul>
-
-                <p><strong>(2) Lightweight Enhancement of Network Structure</strong></p>
-                <p>To adapt to edge computing devices, we performed three-step customized optimization on the basis of YOLOv8n, balancing lightweight and detection accuracy:</p>
-                <div class="code-block">
-# Core code for YOLOv8n lightweight optimization (tunnel defect-specific)
-from ultralytics import YOLO
-import torch.nn as nn
-import torch
-
-# 1. Backbone enhancement: MobileNetV4 lightweight replacement + attention module
-def enhance_backbone(model):
-    # Load lightweight MobileNetV4 backbone
-    mobilenet = torch.hub.load('huawei-noah/CV-Backbones', 'mobilenetv4_conv_small', pretrained=True)
-    # Replace original C2f module of YOLOv8n, retain detection head
-    model.model.model[0:8] = mobilenet.features[0:16]
-    # Add CBAM attention module to enhance defect feature extraction
-    for i, m in enumerate(model.model.model):
-        if 'Conv' in str(type(m)) and m.out_channels == 64:
-            model.model.model[i] = nn.Sequential(m, nn.Conv2d(64,64,1), nn.Sigmoid())
-    return model
-
-# 2. Channel pruning: Precision pruning based on sensitivity analysis
-def prune_yolov8(model, prune_rate=0.25):
-    # Only prune non-critical layers to retain detection accuracy
-    prune_layers = [1,3,5]  # Specify pruning layer indices
-    for idx in prune_layers:
-        m = model.model.model[idx]
-        if isinstance(m, nn.Conv2d):
-            # Calculate channel importance and prune 25% redundant channels
-            importance = torch.sum(torch.abs(m.weight.data), dim=(0,1,2))
-            keep_idx = torch.argsort(importance, descending=True)[:int(len(importance)*(1-prune_rate))]
-            m.weight.data = m.weight.data[:, keep_idx, :, :]
-            if m.bias is not None:
-                m.bias.data = m.bias.data[keep_idx]
-    return model
-
-# 3. Model training and export (adapt to YOLOv8 native API)
-model = YOLO("yolov8n.pt")
-model = enhance_backbone(model)
-model = prune_yolov8(model)
-
-# Training configuration (optimized hyperparameters for tunnel defects)
-results = model.train(
-    data="tunnel_defect.yaml",  # Bimodal dataset configuration
-    epochs=150,                 # YOLOv8 converges faster, increase training epochs to improve accuracy
-    imgsz=480,                  # Reduce input size to improve speed
-    batch=32,
-    optimizer="AdamW",
-    lr0=0.001,                  # Reduce initial learning rate to avoid overfitting
-    lrf=0.01,
-    weight_decay=0.0005,
-    name="tunnel_yolov8_pruned"
-)
-
-# Export to TensorRT format for direct edge deployment
-model.export(format="engine", device=0, dynamic=True, half=True)
-                </div>
-
-                <p><strong>(3) In-Depth Optimization of Inference Deployment</strong></p>
-                <p>Targeting YOLOv8's inference characteristics, we adopted a combined optimization of TensorRT + ONNX Runtime to achieve extreme performance on Jetson Xavier NX:</p>
-                <ul class="feature-list">
-                    <li>Accuracy Optimization: Adopting FP16 half-precision inference, the accuracy loss of YOLOv8n is ≤1.5% (far lower than YOLOv5's 2%), and the inference speed is increased by 2.8 times.</li>
-                    <li>Memory Optimization: Utilizing YOLOv8's dynamic shape feature and combining with memory pool reuse technology, reducing model running memory from 0.8GB to 0.4GB.</li>
-                    <li>Parallel Processing: Based on YOLOv8's asynchronous inference API, performing radar data collection and model inference in parallel, reducing total processing delay from 150ms to 72ms, far below the real-time requirement of 100ms.</li>
-                </ul>
-                
-                <p>Performance comparison of optimized YOLOv8 model:</p>
-                <table class="comparison-table" style="margin:10px 0;">
-                    <tr>
-                        <th>Indicator</th>
-                        <th>Original YOLOv8n</th>
-                        <th>Optimized YOLOv8n</th>
-                        <th>Improvement Rate</th>
-                    </tr>
-                    <tr>
-                        <td>mAP@0.5</td>
-                        <td>0.90</td>
-                        <td>0.93</td>
-                        <td>+3.3%</td>
-                    </tr>
-                    <tr>
-                        <td>Inference Speed (fps)</td>
-                        <td>72</td>
-                        <td>98</td>
-                        <td>+36.1%</td>
-                    </tr>
-                    <tr>
-                        <td>Parameter Quantity (M)</td>
-                        <td>3.2</td>
-                        <td>2.4</td>
-                        <td>-25%</td>
-                    </tr>
-                    <tr>
-                        <td>Single-Frame Delay (ms)</td>
-                        <td>14</td>
-                        <td>10</td>
-                        <td>-28.6%</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="tech-arch">
-                <p><strong>3. Intelligent Monitoring System Software Platform</strong></p>
-                <p>Developed based on B/S architecture, the software platform deeply integrates YOLOv8 inference engine, supports PC and mobile access, and realizes the full process of "data collection - real-time analysis - visual display - closed-loop management":</p>
-
-                <ul class="feature-list">
-                    <li><strong>Real-Time Monitoring Module</strong>: Displays robot position (accuracy ±0.5m), posture, adsorption force, radar data and other parameters, embeds YOLOv8 real-time inference window, and supports remote control of robot start/stop, steering, and adjustment of inspection parameters.</li>
-                    <li><strong>Defect Analysis Module</strong>: YOLOv8 model automatically identifies defect types and positions, calculates defect area, depth and other parameters combined with radar signal characteristics; supports manual review and annotation correction, and generates defect analysis reports with one click.</li>
-                    <li><strong>3D Visualization Module</strong>: Constructs 3D model of tunnel lining based on point cloud data, annotates defects identified by YOLOv8 with different colors (red for cavities, blue for insufficient thickness, etc.), supports rotation and scaling viewing, and accurately displays defect pile numbers and ring numbers.</li>
-                    <li><strong>Closed-Loop Management Module</strong>: Automatically pushes defects identified by YOLOv8 to responsible persons according to severity levels (Grade Ⅰ-Ⅳ), tracks rectification progress, associates re-inspection data, and forms closed-loop records of "inspection - rectification - re-inspection".</li>
-                </ul>
-            </div>
-
-            <p class="section-subheading">III. Engineering Implementation: From Technical Verification to Large-Scale Application</p>
-            <p>The project has gone through three stages: laboratory testing, field pilot, and large-scale application, overcoming multiple engineering challenges based on the algorithm advantages of YOLOv8, and has now been implemented in multiple major railway projects.</p>
-
-            <p><strong>1. Core Technical Challenges and Solutions</strong></p>
-            <div class="sub-tech-arch">
-                <p><strong>Challenge 1: Severe Interference of Radar Signals by Steel Bar Layers</strong></p>
-                <p>Steel bar meshes in tunnel lining generate strong reflection signals, masking defect features such as cavities and leading to increased model false detection rate.</p>
-                <p>Solutions: ① Algorithm level: Add a steel bar signal suppression module (based on YOLOv8's custom detection head) in YOLOv8 to separate steel bar and defect signals through Fourier transform; ② Hardware level: Optimize radar operating frequency from 900MHz to 850MHz to reduce steel bar reflection intensity; ③ Data level: Construct a mixed sample library of "steel bars + defects" and conduct special training on YOLOv8's discrimination ability. Finally, reduce the false detection rate caused by steel bar interference from 35% to 6% (better than YOLOv5's 8%).</p>
-            </div>
-
-            <div class="sub-tech-arch">
-                <p><strong>Challenge 2: Insufficient Stability of Curved Surface Adsorption</strong></p>
-                <p>Tunnel lining is an arc-shaped curved surface, and traditional flat suction cups are prone to air leakage, resulting in unstable adsorption.</p>
-                <p>Solutions: ① Adopt flexible suction cup lip design to adapt to curved surfaces with curvature radius ≥3m; ② Develop adaptive pressure adjustment algorithm to automatically adjust the adsorption force distribution of 4 suction cups according to curved surface curvature; ③ Add side guide wheels to make the robot walk close to the wall surface and reduce posture deviation. Tests show that when walking on curved surfaces with curvature radius 3m, the adsorption force fluctuation is ≤±10N.</p>
-            </div>
-
-            <div class="sub-tech-arch">
-                <p><strong>Challenge 3: Long-Distance Data Transmission Delay</strong></p>
-                <p>When the tunnel length exceeds 1km, 5G signal attenuation causes data transmission delay, affecting YOLOv8 real-time inference display.</p>
-                <p>Solutions: ① Deploy wireless relay equipment, setting up 1 repeater every 500m to ensure signal strength ≥-70dBm; ② Adopt data sharding transmission technology, dividing radar images into 256×256 pixel shards and prioritizing transmission of key area data; ③ Local caching mechanism: when transmission is interrupted, YOLOv8 inference results are automatically cached in the robot's local storage and supplemented after recovery. After optimization, the transmission delay is ≤180ms and data integrity reaches 100%.</p>
-            </div>
-
-            <p><strong>2. Typical Application Cases and Effect Verification</strong></p>
-            <p>The project has been applied in 5 major projects including Taiyuan-Xiongxin Railway, Jining-Datong-Yuanping Railway, and Chongqing-Qianjiang Railway, with a total inspection mileage exceeding 160km. The YOLOv8-based detection scheme has significant advantages over traditional schemes:</p>
-
-            <table class="comparison-table">
-                <tr>
-                    <th>Application Project</th>
-                    <th>Tunnel Type</th>
-                    <th>Inspection Mileage</th>
-                    <th>Traditional Inspection Time</th>
-                    <th>Robot Inspection Time</th>
-                    <th>Number of Defects Found</th>
-                    <th>YOLOv8 Recognition Accuracy</th>
-                </tr>
-                <tr>
-                    <td>Taiyuan-Xiongxin Railway XX Tunnel</td>
-                    <td>Single-track tunnel (diameter 7.2m)</td>
-                    <td>12.8km</td>
-                    <td>64 days (3 shifts)</td>
-                    <td>16 days (2 shifts)</td>
-                    <td>43 (including 12 hidden cavities)</td>
-                    <td>95.6%</td>
-                </tr>
-                <tr>
-                    <td>Jining-Datong-Yuanping Railway YY Tunnel</td>
-                    <td>Double-track tunnel (diameter 10.8m)</td>
-                    <td>28.5km</td>
-                    <td>142 days (3 shifts)</td>
-                    <td>35 days (2 shifts)</td>
-                    <td>78 (including 25 insufficient thickness)</td>
-                    <td>94.8%</td>
-                </tr>
-            </table>
-
-            <p><strong>3. Technical Achievements and Industry Recognition</strong></p>
-            <ul class="feature-list">
-                <li>Intellectual Property: Applied for 39 core patents, including 2 invention patents for YOLOv8-based defect detection algorithms and 34 utility model patents; the overseas patent "Climbing Robot and Method for Detecting Foreign Object Intrusion in Subway Tunnels" has been authorized in South Africa.</li>
-                <li>Technical Certification: Passed the detection by the Engineering Quality Supervision and Inspection Center of the National Railway Administration, with YOLOv8-based defect recognition accuracy reaching 95%; appraised by the academician team of He Chuan, the overall technology has reached the "international leading level".</li>
-                <li>Industry Awards: Won the First Prize of China Railway Engineering Technology Innovation 2024 and the Intelligent Construction Technology Innovation Award 2024 (YOLOv8 algorithm as the core award-winning point).</li>
-            </ul>
-
-            <div class="quote-block">
-                "The application of adsorption-type concrete inspection robots has increased the efficiency of tunnel lining inspection by more than 3 times, completely solving the safety risks and data accuracy problems of traditional manual inspection. Its intelligent recognition technology based on YOLOv8 model realizes automated classification and positioning of defects, with inspection accuracy and speed reaching the industry-leading level, providing accurate data support for tunnel operation and maintenance."
-                <br>—— Zhang XX, Chief Engineer, China Railway Engineering Group Co., Ltd.
-            </div>
-
-            <p class="section-subheading">IV. Future Outlook: Technology Iteration and Application Expansion</p>
-            <p>Based on the YOLOv8 technical foundation, we have planned three directions of iterative upgrading to further expand product capabilities:</p>
-
-            <ol class="feature-list" style="list-style-type: decimal; padding-left: 45px;">
-                <li><strong>Algorithm Advancement: YOLOv9 + Multi-Source Data Fusion</strong>
-                    <p>Introduce Generative Adversarial Networks (GAN) to generate scarce defect samples to solve the small sample detection problem; based on YOLOv9's higher accuracy characteristics, fuse ground-penetrating radar, laser scanning, and infrared thermal imaging data to build a multimodal detection model, realizing comprehensive detection of "surface defects + internal defects". Plan to complete prototype development by the end of 2025, with defect recognition accuracy increased to over 97%.</p>
-                </li>
-                <li><strong>Hardware Upgrade: Autonomous Navigation and Endurance Optimization</strong>
-                    <p>Equip SLAM algorithm to realize robot autonomous positioning and path planning without manual remote control; develop wireless charging technology, set up charging stations in tunnels to realize automatic robot charging, extending endurance time to 8 hours. Plan to launch the third-generation product "Tiehang-3" in 2026 with built-in YOLOv8 inference acceleration chip.</p>
-                </li>
-                <li><strong>Application Expansion: Cross-Scenario Universal Inspection Platform</strong>
-                    <p>Extend YOLOv8-based detection technology from tunnel inspection to bridge, dam, and pipe gallery structural inspection, developing special adaptation modules: bridge inspection module (adding climbing adsorption mechanism), dam inspection module (enhancing waterproof and dustproof capabilities). Plan to build a "Building Structure Intelligent Inspection Cloud Platform" in 2027, integrating YOLO series algorithms to realize unified management and analysis of multi-scenario data.</p>
-                </li>
-            </ol>
-
-            <p style="margin-top:30px; font-weight: 600; color: #333;">If you are interested in the technical details of the project, welcome to communicate through the following channels:</p>
-            <ul class="feature-list">
-                <li>Technical Exchange Email: Lanyi_adict[AT]outlook.com</li>
-            </ul>
-        </div>
-
-        <!-- Discussion section -->
-        <hr>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-            <tbody><tr>
-                <td width="100%" valign="top">
-                    <sectionheading>&nbsp;&nbsp;Discussion and Feedback</sectionheading>
-                    <p>Welcome to share your technical questions about YOLOv8 algorithm optimization and robot hardware design, as well as application suggestions or cooperation ideas. Log in to GitHub to participate in the discussion:</p>
-                    
-                    <!-- GitHub login discussion integration -->
-                    <div id="github-discussion" style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
-                        <script src="https://utteranc.es/client.js"
-                                repo="Hongming-Intelligent-Technology/Project-1"
-                                issue-term="pathname"
-                                label="blog-discussion"
-                                theme="github-light"
-                                crossorigin="anonymous"
-                                async>
-                        </script>
+    <table width="900" border="0" align="center" cellspacing="0" cellpadding="20">
+        <tbody>
+            <tr>
+                <td>
+                    <!-- Header navigation + blog title -->
+                    <div class="text-center">
+                        <h1 class="page-heading">An Improved YOLO-Based Method for Tunnel Concrete Defect Detection & Robot
+                        </h1><br>
+                        <small style="color:#666;">Redefining Tunnel Lining Quality Inspection from Industry Pain Points
+                            to Technical Implementation</small>
                     </div>
-                    
-                    <p style="margin-top:15px;">
-                        <a href="https://github.com/Hongming-Intelligent-Technology/Project-1/issues" style="background: #1772d0; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; display: inline-block;">
-                            View All Discussions →
-                        </a>
+                    <div class="blog-meta text-center">
+                        Publication Date: June 10, 2025 | Author: Hongyi Hao; Bingyu Zhou; Xizhe Wang; Yuhui Zhang; Kun Yao; Haonan Jia | Category: Robotics / Computer Vision /
+                        Engineering Inspection
+                        <br>Technical Keywords: YOLOv8 | Adsorption-Type Robot | Radar Detection | 5G Transmission | 3D
+                        Visualization
+                    </div>
+                    <hr>
+                    <!-- Return button group -->
+                    <p style="margin-bottom:20px;">
+                        <a href="../"
+                            style="background: #f0f0f0; color: #1772d0; padding: 6px 12px; border-radius: 6px; text-decoration: none;">←
+                            Project Homepage</a>
                     </p>
+
+                    <!-- Blog content -->
+                    <div class="blog-content">
+                        <p>As of the end of 2024, China's railway tunnels have reached 16,798 with a total length of
+                            approximately 19,630 km. As the core barrier for structural safety, the quality inspection
+                            of tunnel lining concrete is crucial for engineering operation and maintenance. However,
+                            traditional inspection methods have long faced three major pain points: first, <strong>low
+                                efficiency</strong> – manual high-altitude handheld radar inspection can only complete
+                            200 meters per day, and setting up inspection frames requires construction interruption;
+                            second, <strong>data distortion</strong> – radar shaking caused by manual operation requires
+                            3-5 repeated inspections to confirm defects; third, <strong>high safety risks</strong> –
+                            fall risks from high-altitude operations and toxic gas threats in tunnels endanger the
+                            safety of operators.</p>
+
+                        <p>To address these challenges, we have developed the "Tiehang Series" adsorption-type concrete
+                            defect detection robot over 2 years. Through the deep integration of YOLOv8 deep learning
+                            model and adsorption-type robot technology, we realize automated, high-precision, and safe
+                            inspection of tunnel lining defects. This article provides a comprehensive analysis from
+                            technology selection, system design, engineering implementation to result verification.</p>
+
+                        <div class="blog-image">
+                            <img src="../data/Detect_Robot/flow_chart.png"
+                                alt="Overall Architecture of Adsorption-Type Concrete Defect Detection Robot System">
+                            <p class="caption">Figure 1: Overall architecture diagram of adsorption-type concrete defect
+                                detection robot and intelligent monitoring system (including three-level architecture of
+                                terminal layer, network layer, and application layer)</p>
+                        </div>
+
+                        <p class="section-subheading">I. Algorithm Selection: Why YOLOv8 is the Optimal Solution for
+                            Tunnel Defect Detection?</p>
+                        <p>The core requirement of tunnel lining defect detection is the balance between "real-time
+                            performance" and "accuracy" – the robot moves at a speed of 0.3 m/s, requiring defect
+                            identification and positioning of a single radar image frame within 100 ms, while the
+                            recognition accuracy for cavities with diameter ≥5 cm needs to exceed 90%. For this reason,
+                            we compared three mainstream detection schemes:</p>
+
+                        <div class="sub-tech-arch">
+                            <p><strong>1. Traditional Machine Vision Scheme</strong></p>
+                            <p>It relies on traditional algorithms such as edge detection and threshold segmentation to
+                                identify defects through gray value differences in radar images. In actual tests, this
+                                scheme has a false detection rate of up to 42% in complex backgrounds such as tunnel
+                                water seepage and steel bar shadows, and cannot distinguish similar defects such as
+                                "incompacted areas" and "cavities", so it has been quickly eliminated.</p>
+                        </div>
+
+                        <div class="sub-tech-arch">
+                            <p><strong>2. Faster-RCNN Two-Stage Detection Scheme</strong></p>
+                            <p>Adopting a two-stage process of "region proposal + classification regression", it
+                                achieves a mean Average Precision (mAP) of 0.89 on the standard defect dataset, but the
+                                inference speed is only 12 fps with a single-frame processing delay of 83 ms. Combined
+                                with data transmission time, it cannot meet real-time detection requirements. Moreover,
+                                the model parameter quantity reaches 120M, making it difficult to deploy on edge
+                                computing devices such as Jetson Xavier NX.</p>
+                        </div>
+
+                        <div class="sub-tech-arch">
+                            <p><strong>3. YOLO Series Single-Stage Detection Scheme</strong></p>
+                            <p>Adopting an end-to-end regression approach, it converts defect detection into direct
+                                prediction of bounding box coordinates and category probabilities. We tested the
+                                performance of YOLO versions v5 to v8 in tunnel defect detection scenarios:</p>
+                            <table class="comparison-table" style="margin:10px 0;">
+                                <tr>
+                                    <th>YOLO Version</th>
+                                    <th>mAP@0.5</th>
+                                    <th>Inference Speed (fps)</th>
+                                    <th>Parameter Quantity (M)</th>
+                                    <th>Small Defect Recognition Rate</th>
+                                    <th>Edge Deployment Adaptability</th>
+                                </tr>
+                                <tr>
+                                    <td>v5s</td>
+                                    <td>0.88</td>
+                                    <td>56</td>
+                                    <td>7.5</td>
+                                    <td>85%</td>
+                                    <td>Excellent</td>
+                                </tr>
+                                <tr>
+                                    <td>v8n</td>
+                                    <td>0.90</td>
+                                    <td>72</td>
+                                    <td>3.2</td>
+                                    <td>89%</td>
+                                    <td>Excellent</td>
+                                </tr>
+                                <tr>
+                                    <td>v8s</td>
+                                    <td>0.92</td>
+                                    <td>45</td>
+                                    <td>11.2</td>
+                                    <td>91%</td>
+                                    <td>Good</td>
+                                </tr>
+                            </table>
+                            <p>Finally, we selected <strong>YOLOv8n</strong> as the basic framework and conducted
+                                enhanced optimization: its basic version has an mAP of 0.90, an inference speed of 72
+                                fps (single-frame delay of only 14 ms), and a parameter quantity of only 3.2M, with
+                                significant lightweight advantages; at the same time, YOLOv8's Anchor-Free design is
+                                more suitable for the irregular shapes of tunnel defects. After targeted optimization,
+                                the small defect recognition rate can be increased to 92%, perfectly balancing accuracy
+                                and speed requirements.</p>
+                        </div>
+
+                        <div class="blog-image">
+                            <img src="../data/Detect_Robot/yolo_compair.png"
+                                alt="Performance Comparison Radar Chart of YOLO Detection Algorithms">
+                            <p class="caption">Figure 2: Performance comparison YOLOv11 and YOLOv8n in tunnel defect
+                                detection</p>
+                        </div>
+
+                        <p class="section-subheading">II. Core Technical Solution: Collaborative Design of Hardware and
+                            Algorithm</p>
+                        <p>The core innovation of the project lies in the deep collaboration between the
+                            "adsorption-type robot hardware platform" and the "YOLOv8 defect detection algorithm",
+                            realizing end-to-end optimization from "signal collection" to "defect identification".</p>
+
+                        <div class="tech-arch">
+                            <p><strong>1. Detailed Explanation of Adsorption-Type Inspection Robot Hardware
+                                    System</strong></p>
+                            <p>The robot adopts a "four-rotor auxiliary + negative pressure adsorption" composite
+                                structure, divided into two models: "Tiehang-1" (lightweight type, suitable for tunnels
+                                with diameter 6-8m) and "Tiehang-2" (heavy-duty type, equipped with multiple sensors,
+                                suitable for tunnels with diameter 8-12m). It consists of five core modules:</p>
+
+                            <ul class="feature-list">
+                                <li><strong>Motion Control Module</strong>: Four-drive wheel set + four-rotor propeller,
+                                    with Mecanum wheels for the front wheel set supporting omnidirectional movement; the
+                                    rotors provide auxiliary lift, reducing negative pressure adsorption power
+                                    consumption by 30%. Equipped with high-precision encoders, the walking speed control
+                                    error is ≤±0.02 m/s.</li>
+                                <li><strong>Adsorption Execution Module</strong>: Four groups of vacuum suction cups
+                                    with distributed layout, each with a diameter of 200mm and a single suction force
+                                    ≥150N; equipped with pressure sensors to monitor adsorption force in real-time,
+                                    automatically activating backup suction cups when the adsorption force is lower than
+                                    80N to prevent falling.</li>
+                                <li><strong>Radar Detection Module</strong>: 900MHz wireless air-coupled radar with
+                                    detection depth of 0-1.5m and distance resolution ≤5mm; integrated signal
+                                    acquisition and processing through timing control chips, with a sampling frequency
+                                    of 200MHz, generating one radar image frame every 0.5s.</li>
+                                <li><strong>Environmental Perception Module</strong>: Integrated with lidar (ranging
+                                    range 0.1-10m), gravity sensor (measurement accuracy ±0.1°), and six-in-one gas
+                                    sensor (detecting O₂, CO, H₂S, etc.) to perceive tunnel environment and robot
+                                    posture in real-time.</li>
+                                <li><strong>Energy and Communication Module</strong>: 50Ah high-capacity lithium battery
+                                    supporting 4 hours of continuous operation; dual communication link design with 5G
+                                    transmission rate ≥100Mbps and coverage radius ≥500m, while retaining WIFI backup
+                                    link to ensure no data loss.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-arch">
+                            <p><strong>2. YOLOv8-Based Defect Detection Algorithm Optimization</strong></p>
+                            <p>Targeting the particularity of tunnel radar images, we conducted in-depth optimization on
+                                YOLOv8n from three aspects: dataset, network structure, and inference deployment,
+                                forming a tunnel defect-specific detection model:</p>
+
+                            <p><strong>(1) Construction and Enhancement of Bimodal Dataset</strong></p>
+                            <p>Traditional single-image datasets cannot cover complex defect types in tunnels. We
+                                constructed a "radar image + original signal" bimodal dataset specifically adapted to
+                                YOLOv8's adaptive anchor box mechanism:</p>
+                            <ul class="feature-list">
+                                <li>Data Collection: Collected 5km of lining data in Xiaolijian Tunnel (with cavity
+                                    defects) and Lushan Tunnel (with steel bar abnormalities) of Huhu Railway, obtaining
+                                    1,200 radar images (resolution 640×480) and 4,000 original radar signals (each
+                                    containing 1,024 sampling points).</li>
+                                <li>Annotation Specification: Annotated in YOLO format (txt files), defining 4 defect
+                                    labels: "cavity" (0), "insufficient thickness" (1), "incompaction" (2), "steel bar
+                                    abnormality" (3). Cross-annotated by 3 senior engineers with annotation accuracy
+                                    ≥98%.</li>
+                                <li>Data Enhancement: Targeting the limitations of YOLOv8's Mosaic enhancement, added a
+                                    "defect area retention" enhancement strategy, combined with 9 enhancement methods
+                                    including sliding window cropping (generating 3x samples), mirror flipping, Gaussian
+                                    noise addition, and brightness adjustment, finally expanding the dataset scale to
+                                    15,000 samples.</li>
+                            </ul>
+
+                            <p><strong>(2) Lightweight Enhancement of Network Structure</strong></p>
+                            <p>To adapt to edge computing devices, we performed three-step customized optimization on
+                                the basis of YOLOv8n, balancing lightweight and detection accuracy:</p>
+                            <div class="code-block">
+                                # Core code for YOLOv8n lightweight optimization (tunnel defect-specific)
+                                from ultralytics import YOLO
+                                import torch.nn as nn
+                                import torch
+
+                                # 1. Backbone enhancement: MobileNetV4 lightweight replacement + attention module
+                                def enhance_backbone(model):
+                                # Load lightweight MobileNetV4 backbone
+                                mobilenet = torch.hub.load('huawei-noah/CV-Backbones', 'mobilenetv4_conv_small',
+                                pretrained=True)
+                                # Replace original C2f module of YOLOv8n, retain detection head
+                                model.model.model[0:8] = mobilenet.features[0:16]
+                                # Add CBAM attention module to enhance defect feature extraction
+                                for i, m in enumerate(model.model.model):
+                                if 'Conv' in str(type(m)) and m.out_channels == 64:
+                                model.model.model[i] = nn.Sequential(m, nn.Conv2d(64,64,1), nn.Sigmoid())
+                                return model
+
+                                # 2. Channel pruning: Precision pruning based on sensitivity analysis
+                                def prune_yolov8(model, prune_rate=0.25):
+                                # Only prune non-critical layers to retain detection accuracy
+                                prune_layers = [1,3,5] # Specify pruning layer indices
+                                for idx in prune_layers:
+                                m = model.model.model[idx]
+                                if isinstance(m, nn.Conv2d):
+                                # Calculate channel importance and prune 25% redundant channels
+                                importance = torch.sum(torch.abs(m.weight.data), dim=(0,1,2))
+                                keep_idx = torch.argsort(importance,
+                                descending=True)[:int(len(importance)*(1-prune_rate))]
+                                m.weight.data = m.weight.data[:, keep_idx, :, :]
+                                if m.bias is not None:
+                                m.bias.data = m.bias.data[keep_idx]
+                                return model
+
+                                # 3. Model training and export (adapt to YOLOv8 native API)
+                                model = YOLO("yolov8n.pt")
+                                model = enhance_backbone(model)
+                                model = prune_yolov8(model)
+
+                                # Training configuration (optimized hyperparameters for tunnel defects)
+                                results = model.train(
+                                data="tunnel_defect.yaml", # Bimodal dataset configuration
+                                epochs=150, # YOLOv8 converges faster, increase training epochs to improve accuracy
+                                imgsz=480, # Reduce input size to improve speed
+                                batch=32,
+                                optimizer="AdamW",
+                                lr0=0.001, # Reduce initial learning rate to avoid overfitting
+                                lrf=0.01,
+                                weight_decay=0.0005,
+                                name="tunnel_yolov8_pruned"
+                                )
+
+                                # Export to TensorRT format for direct edge deployment
+                                model.export(format="engine", device=0, dynamic=True, half=True)
+                            </div>
+
+                            <p><strong>(3) In-Depth Optimization of Inference Deployment</strong></p>
+                            <p>Targeting YOLOv8's inference characteristics, we adopted a combined optimization of
+                                TensorRT + ONNX Runtime to achieve extreme performance on Jetson Xavier NX:</p>
+                            <ul class="feature-list">
+                                <li>Accuracy Optimization: Adopting FP16 half-precision inference, the accuracy loss of
+                                    YOLOv8n is ≤1.5% (far lower than YOLOv5's 2%), and the inference speed is increased
+                                    by 2.8 times.</li>
+                                <li>Memory Optimization: Utilizing YOLOv8's dynamic shape feature and combining with
+                                    memory pool reuse technology, reducing model running memory from 0.8GB to 0.4GB.
+                                </li>
+                                <li>Parallel Processing: Based on YOLOv8's asynchronous inference API, performing radar
+                                    data collection and model inference in parallel, reducing total processing delay
+                                    from 150ms to 72ms, far below the real-time requirement of 100ms.</li>
+                            </ul>
+
+                            <p>Performance comparison of optimized YOLOv8 model:</p>
+                            <table class="comparison-table" style="margin:10px 0;">
+                                <tr>
+                                    <th>Indicator</th>
+                                    <th>Original YOLOv8n</th>
+                                    <th>Optimized YOLOv8n</th>
+                                    <th>Improvement Rate</th>
+                                </tr>
+                                <tr>
+                                    <td>mAP@0.5</td>
+                                    <td>0.90</td>
+                                    <td>0.93</td>
+                                    <td>+3.3%</td>
+                                </tr>
+                                <tr>
+                                    <td>Inference Speed (fps)</td>
+                                    <td>72</td>
+                                    <td>98</td>
+                                    <td>+36.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>Parameter Quantity (M)</td>
+                                    <td>3.2</td>
+                                    <td>2.4</td>
+                                    <td>-25%</td>
+                                </tr>
+                                <tr>
+                                    <td>Single-Frame Delay (ms)</td>
+                                    <td>14</td>
+                                    <td>10</td>
+                                    <td>-28.6%</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="tech-arch">
+                            <p><strong>3. Intelligent Monitoring System Software Platform</strong></p>
+                            <p>Developed based on B/S architecture, the software platform deeply integrates YOLOv8
+                                inference engine, supports PC and mobile access, and realizes the full process of "data
+                                collection - real-time analysis - visual display - closed-loop management":</p>
+
+                            <ul class="feature-list">
+                                <li><strong>Real-Time Monitoring Module</strong>: Displays robot position (accuracy
+                                    ±0.5m), posture, adsorption force, radar data and other parameters, embeds YOLOv8
+                                    real-time inference window, and supports remote control of robot start/stop,
+                                    steering, and adjustment of inspection parameters.</li>
+                                <li><strong>Defect Analysis Module</strong>: YOLOv8 model automatically identifies
+                                    defect types and positions, calculates defect area, depth and other parameters
+                                    combined with radar signal characteristics; supports manual review and annotation
+                                    correction, and generates defect analysis reports with one click.</li>
+                                <li><strong>3D Visualization Module</strong>: Constructs 3D model of tunnel lining based
+                                    on point cloud data, annotates defects identified by YOLOv8 with different colors
+                                    (red for cavities, blue for insufficient thickness, etc.), supports rotation and
+                                    scaling viewing, and accurately displays defect pile numbers and ring numbers.</li>
+                                <li><strong>Closed-Loop Management Module</strong>: Automatically pushes defects
+                                    identified by YOLOv8 to responsible persons according to severity levels (Grade
+                                    Ⅰ-Ⅳ), tracks rectification progress, associates re-inspection data, and forms
+                                    closed-loop records of "inspection - rectification - re-inspection".</li>
+                            </ul>
+                        </div>
+
+                        <p class="section-subheading">III. Engineering Implementation: From Technical Verification to
+                            Large-Scale Application</p>
+                        <p>The project has gone through three stages: laboratory testing, field pilot, and large-scale
+                            application, overcoming multiple engineering challenges based on the algorithm advantages of
+                            YOLOv8, and has now been implemented in multiple major railway projects.</p>
+
+                        <p><strong>1. Core Technical Challenges and Solutions</strong></p>
+                        <div class="sub-tech-arch">
+                            <p><strong>Challenge 1: Severe Interference of Radar Signals by Steel Bar Layers</strong>
+                            </p>
+                            <p>Steel bar meshes in tunnel lining generate strong reflection signals, masking defect
+                                features such as cavities and leading to increased model false detection rate.</p>
+                            <p>Solutions: ① Algorithm level: Add a steel bar signal suppression module (based on
+                                YOLOv8's custom detection head) in YOLOv8 to separate steel bar and defect signals
+                                through Fourier transform; ② Hardware level: Optimize radar operating frequency from
+                                900MHz to 850MHz to reduce steel bar reflection intensity; ③ Data level: Construct a
+                                mixed sample library of "steel bars + defects" and conduct special training on YOLOv8's
+                                discrimination ability. Finally, reduce the false detection rate caused by steel bar
+                                interference from 35% to 6% (better than YOLOv5's 8%).</p>
+                        </div>
+
+                        <div class="sub-tech-arch">
+                            <p><strong>Challenge 2: Insufficient Stability of Curved Surface Adsorption</strong></p>
+                            <p>Tunnel lining is an arc-shaped curved surface, and traditional flat suction cups are
+                                prone to air leakage, resulting in unstable adsorption.</p>
+                            <p>Solutions: ① Adopt flexible suction cup lip design to adapt to curved surfaces with
+                                curvature radius ≥3m; ② Develop adaptive pressure adjustment algorithm to automatically
+                                adjust the adsorption force distribution of 4 suction cups according to curved surface
+                                curvature; ③ Add side guide wheels to make the robot walk close to the wall surface and
+                                reduce posture deviation. Tests show that when walking on curved surfaces with curvature
+                                radius 3m, the adsorption force fluctuation is ≤±10N.</p>
+                        </div>
+
+                        <div class="sub-tech-arch">
+                            <p><strong>Challenge 3: Long-Distance Data Transmission Delay</strong></p>
+                            <p>When the tunnel length exceeds 1km, 5G signal attenuation causes data transmission delay,
+                                affecting YOLOv8 real-time inference display.</p>
+                            <p>Solutions: ① Deploy wireless relay equipment, setting up 1 repeater every 500m to ensure
+                                signal strength ≥-70dBm; ② Adopt data sharding transmission technology, dividing radar
+                                images into 256×256 pixel shards and prioritizing transmission of key area data; ③ Local
+                                caching mechanism: when transmission is interrupted, YOLOv8 inference results are
+                                automatically cached in the robot's local storage and supplemented after recovery. After
+                                optimization, the transmission delay is ≤180ms and data integrity reaches 100%.</p>
+                        </div>
+
+                        <p><strong>2. Typical Application Cases and Effect Verification</strong></p>
+                        <p>The project has been applied in 5 major projects including Taiyuan-Xiongxin Railway,
+                            Jining-Datong-Yuanping Railway, and Chongqing-Qianjiang Railway, with a total inspection
+                            mileage exceeding 160km. The YOLOv8-based detection scheme has significant advantages over
+                            traditional schemes:</p>
+
+                        <table class="comparison-table">
+                            <tr>
+                                <th>Application Project</th>
+                                <th>Tunnel Type</th>
+                                <th>Inspection Mileage</th>
+                                <th>Traditional Inspection Time</th>
+                                <th>Robot Inspection Time</th>
+                                <th>Number of Defects Found</th>
+                                <th>YOLOv8 Recognition Accuracy</th>
+                            </tr>
+                            <tr>
+                                <td>Taiyuan-Xiongxin Railway XX Tunnel</td>
+                                <td>Single-track tunnel (diameter 7.2m)</td>
+                                <td>12.8km</td>
+                                <td>64 days (3 shifts)</td>
+                                <td>16 days (2 shifts)</td>
+                                <td>43 (including 12 hidden cavities)</td>
+                                <td>95.6%</td>
+                            </tr>
+                            <tr>
+                                <td>Jining-Datong-Yuanping Railway YY Tunnel</td>
+                                <td>Double-track tunnel (diameter 10.8m)</td>
+                                <td>28.5km</td>
+                                <td>142 days (3 shifts)</td>
+                                <td>35 days (2 shifts)</td>
+                                <td>78 (including 25 insufficient thickness)</td>
+                                <td>94.8%</td>
+                            </tr>
+                        </table>
+
+                        <p><strong>3. Technical Achievements and Industry Recognition</strong></p>
+                        <ul class="feature-list">
+                            <li>Intellectual Property: Applied for 39 core patents, including 2 invention patents for
+                                YOLOv8-based defect detection algorithms and 34 utility model patents; the overseas
+                                patent "Climbing Robot and Method for Detecting Foreign Object Intrusion in Subway
+                                Tunnels" has been authorized in South Africa.</li>
+                            <li>Technical Certification: Passed the detection by the Engineering Quality Supervision and
+                                Inspection Center of the National Railway Administration, with YOLOv8-based defect
+                                recognition accuracy reaching 95%; appraised by the academician team of He Chuan, the
+                                overall technology has reached the "international leading level".</li>
+                            <li>Industry Awards: Won the First Prize of China Railway Engineering Technology Innovation
+                                2024 and the Intelligent Construction Technology Innovation Award 2024 (YOLOv8 algorithm
+                                as the core award-winning point).</li>
+                        </ul>
+
+                        <div class="quote-block">
+                            "The application of adsorption-type concrete inspection robots has increased the efficiency
+                            of tunnel lining inspection by more than 3 times, completely solving the safety risks and
+                            data accuracy problems of traditional manual inspection. Its intelligent recognition
+                            technology based on YOLOv8 model realizes automated classification and positioning of
+                            defects, with inspection accuracy and speed reaching the industry-leading level, providing
+                            accurate data support for tunnel operation and maintenance."
+                            <br>—— Zhang XX, Chief Engineer, China Railway Engineering Group Co., Ltd.
+                        </div>
+
+                        <p class="section-subheading">IV. Future Outlook: Technology Iteration and Application Expansion
+                        </p>
+                        <p>Based on the YOLOv8 technical foundation, we have planned three directions of iterative
+                            upgrading to further expand product capabilities:</p>
+
+                        <ol class="feature-list" style="list-style-type: decimal; padding-left: 45px;">
+                            <li><strong>Algorithm Advancement: YOLOv9 + Multi-Source Data Fusion</strong>
+                                <p>Introduce Generative Adversarial Networks (GAN) to generate scarce defect samples to
+                                    solve the small sample detection problem; based on YOLOv9's higher accuracy
+                                    characteristics, fuse ground-penetrating radar, laser scanning, and infrared thermal
+                                    imaging data to build a multimodal detection model, realizing comprehensive
+                                    detection of "surface defects + internal defects". Plan to complete prototype
+                                    development by the end of 2025, with defect recognition accuracy increased to over
+                                    97%.</p>
+                            </li>
+                            <li><strong>Hardware Upgrade: Autonomous Navigation and Endurance Optimization</strong>
+                                <p>Equip SLAM algorithm to realize robot autonomous positioning and path planning
+                                    without manual remote control; develop wireless charging technology, set up charging
+                                    stations in tunnels to realize automatic robot charging, extending endurance time to
+                                    8 hours. Plan to launch the third-generation product "Tiehang-3" in 2026 with
+                                    built-in YOLOv8 inference acceleration chip.</p>
+                            </li>
+                            <li><strong>Application Expansion: Cross-Scenario Universal Inspection Platform</strong>
+                                <p>Extend YOLOv8-based detection technology from tunnel inspection to bridge, dam, and
+                                    pipe gallery structural inspection, developing special adaptation modules: bridge
+                                    inspection module (adding climbing adsorption mechanism), dam inspection module
+                                    (enhancing waterproof and dustproof capabilities). Plan to build a "Building
+                                    Structure Intelligent Inspection Cloud Platform" in 2027, integrating YOLO series
+                                    algorithms to realize unified management and analysis of multi-scenario data.</p>
+                            </li>
+                        </ol>
+
+                        <p style="margin-top:30px; font-weight: 600; color: #333;">If you are interested in the
+                            technical details of the project, welcome to communicate through the following channels:</p>
+                        <ul class="feature-list">
+                            <li>Technical Exchange Email: Lanyi_adict[AT]outlook.com</li>
+                        </ul>
+                    </div>
+
+                    <hr>
+
+                    <!-- Footer -->
+                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="2">
+                        <tbody>
+                            <tr>
+                                <td><br>
+                                    <p class="text-right">
+                                        Copyright © Hongming-Intelligent-Technology |
+                                        <a
+                                            href="https://github.com/Hongming-Intelligent-Technology/Project-1/blob/main/LICENSE">MIT
+                                            License</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </td>
             </tr>
-        </tbody></table>
-
-        <hr>
-
-        <!-- Footer -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="2">
-            <tbody><tr><td><br><p align="right">
-                Copyright © Hongming-Intelligent-Technology | 
-                <a href="https://github.com/Hongming-Intelligent-Technology/Project-1/blob/main/LICENSE">MIT License</a>
-            </p></td></tr>
-        </tbody></table>
-    </td></tr>
-</tbody></table>
+        </tbody>
+    </table>
 </body>
+
 </html>

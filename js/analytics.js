@@ -21,7 +21,7 @@
         // 追踪GitHub相关按钮
         const githubButtons = document.querySelectorAll('a[href*="github.com/Hongming-Intelligent-Technology"]');
         githubButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function() {
                 const buttonText = this.textContent.trim() || this.innerText.trim();
                 ga('send', {
                     hitType: 'event',
@@ -35,10 +35,10 @@
         });
 
         // 追踪项目链接按钮
-        const projectLinks = document.querySelectorAll('a[href*="Project-"]');
+        const projectLinks = document.querySelectorAll('a[id^="PROJECT-"]');
         projectLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const projectId = this.id || this.closest('.paper').id;
+            link.addEventListener('click', function() {
+                const projectId = this.id || this.closest('.paper')?.id || 'unknown-project';
                 ga('send', {
                     hitType: 'event',
                     eventCategory: 'Project',
